@@ -20,14 +20,17 @@ function runCalculation() {
 	age = Number(age);
 	
 	var bmi = (weight / (height * height) * 703);
-	document.getElementById('bmi-result').innerHTML = 'your bmi is: ' + bmi;
+	document.getElementById('bmi-result').innerHTML = 'Your BMI is: ' + bmi + '.';
+	
+	var protein = (weight / 20) * 7);
+	document.getElementById('protein-result').innerHTML = 'Your protein intake should be: ' + protein + 'grams.';
 	
 	var bmr = (10 * weight * 0.45) + (6.25 * height * 2.54) - (5 * age);
 	bmr = bmr + (gender == 'female' ? -161 : 5);
-	document.getElementById('bmr').innerHTML = 'your bmr is: ' + bmr;
-	document.getElementById('sed').innerHTML = 'your sedentary mainetenance is: ' + (bmr * 1.2);
-	document.getElementById('light').innerHTML = 'your light exercise maintenance is: ' + (bmr * 1.375);
-	document.getElementById('mod').innerHTML = 'your moderate exercise maintenance is: ' + (bmr * 1.55);
-	document.getElementById('heavy').innerHTML = 'your heavy exercise maintenance is: ' + (bmr * 1.725);
-	document.getElementById('athlete').innerHTML = 'your athlete exercise maintenance is: ' + (bmr * 1.9);
+	document.getElementById('bmr').innerHTML = 'Your basal metabolic rate is: ' + bmr;
+	document.getElementById('sed').innerHTML = 'your sedentary maintenance calories are: ' + (bmr * 1.2);
+	document.getElementById('light').innerHTML = 'Your light exercise maintenance calories are: ' + (bmr * 1.375);
+	document.getElementById('mod').innerHTML = 'Your moderate exercise maintenance calories are: ' + (bmr * 1.55);
+	document.getElementById('heavy').innerHTML = 'Your heavy exercise maintenance calories are: ' + (bmr * 1.725);
+	document.getElementById('athlete').innerHTML = 'Your athlete exercise maintenance calories are: ' + (bmr * 1.9);
 }
